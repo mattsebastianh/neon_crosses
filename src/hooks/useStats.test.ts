@@ -1,7 +1,6 @@
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
 import { renderHook, act } from '@testing-library/react';
 import { useStats } from './useStats';
-import type { GameMode } from '../App';
 
 describe('useStats', () => {
   const STORAGE_KEY = 'tictactoe-stats-v2';

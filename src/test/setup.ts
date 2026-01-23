@@ -1,29 +1,36 @@
-import { expect, afterEach, beforeAll } from 'vitest';
+import { afterEach, beforeAll } from 'vitest';
 import { cleanup } from '@testing-library/react';
 import '@testing-library/jest-dom/vitest';
 
 // Setup localStorage mock
 beforeAll(() => {
-  const localStorageMock = {
-    getItem: (key: string) => {
-      return localStorageMock[key] || null;
+  const store: Record<string, string> = {};
+  
+  const localStorageMock: Storage = {
+    getItem: (key: string): string | null => {
+      return store[key] || null;
     },
-    setItem: (key: string, value: string) => {
-      localStorageMock[key] = value;
+    setItem: (key: string, value: string): void => {
+      store[key] = value;
     },
-    removeItem: (key: string) => {
-      delete localStorageMock[key];
+    removeItem: (key: string): void => {
+      delete store[key];
     },
-    clear: () => {
-      Object.keys(localStorageMock).forEach(key => {
-        if (key !== 'getItem' && key !== 'setItem' && key !== 'removeItem' && key !== 'clear') {
-          delete localStorageMock[key];
-        }
+    clear: (): void => {
+      Object.keys(store).forEach(key => {
+        delete store[key];
       });
+    },
+    key: (index: number): string | null => {
+      const keys = Object.keys(store);
+      return keys[index] || null;
+    },
+    get length(): number {
+      return Object.keys(store).length;
     },
   };
   
-  global.localStorage = localStorageMock as any;
+  (globalThis as any).localStorage = localStorageMock;
 });
 
 // Cleanup after each test
