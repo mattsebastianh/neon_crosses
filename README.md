@@ -12,7 +12,7 @@ A modern, neon-themed Tic-Tac-Toe game built with React, TypeScript, and Vite. F
 - **Three AI Difficulty Modes**
   - **Easy**: Random move selection
   - **Medium**: 60% optimal play, 40% random
-  - **Impossible**: Minimax-based unbeatable AI
+  - **Hard**: Minimax-based unbeatable AI
 - **Persistent Statistics**: Track wins, losses, and draws per difficulty
 - **Responsive Design**: Dynamically adapts to any screen size
 - **Smooth Animations**: CSS-based transitions and effects
