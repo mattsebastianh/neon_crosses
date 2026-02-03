@@ -38,7 +38,7 @@ describe('MainMenu', () => {
     it('should render the title', () => {
       render(<MainMenu onStartGame={mockOnStartGame} />);
       expect(screen.getByText('Neon')).toBeInTheDocument();
-      expect(screen.getByText('Tris')).toBeInTheDocument();
+      expect(screen.getByText('Crosses')).toBeInTheDocument();
     });
 
     it('should render difficulty selection header', () => {

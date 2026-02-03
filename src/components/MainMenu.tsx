@@ -25,7 +25,7 @@ const MainMenu: React.FC<MainMenuProps> = ({ onStartGame }) => {
     return (
         <div className="main-menu">
             <h1 className="title">
-                Neon <span className="highlight">Tris</span>
+                Neon <span className="highlight">Crosses</span>
             </h1>
 
             <div className="menu-options">
@@ -34,8 +34,6 @@ const MainMenu: React.FC<MainMenuProps> = ({ onStartGame }) => {
                 <button onClick={() => onStartGame('medium')}>MEDIUM</button>
                 <button className="btn-hard" onClick={() => onStartGame('hard')}>HARD</button>
             </div>
-
-            <button className="btn-reset" onClick={resetStats}>RESET STATS</button>
 
             <div className="stats-section">
                 <div className="stats-header">
@@ -85,6 +83,8 @@ const MainMenu: React.FC<MainMenuProps> = ({ onStartGame }) => {
                     })}
                 </div>
             </div>
+
+            <button className="btn-reset" onClick={resetStats}>RESET STATS</button>
         </div>
     );
 };
