@@ -50,7 +50,7 @@ describe('MainMenu', () => {
       render(<MainMenu onStartGame={mockOnStartGame} />);
       expect(screen.getByText('EASY')).toBeInTheDocument();
       expect(screen.getByText('MEDIUM')).toBeInTheDocument();
-      expect(screen.getByText('CHALLENGE')).toBeInTheDocument();
+      expect(screen.getByText('HARD')).toBeInTheDocument();
     });
 
     it('should render reset stats button', () => {
@@ -81,7 +81,7 @@ describe('MainMenu', () => {
 
     it('should call onStartGame with "hard" when Challenge button is clicked', () => {
       render(<MainMenu onStartGame={mockOnStartGame} />);
-      const hardButton = screen.getByText('CHALLENGE');
+      const hardButton = screen.getByText('HARD');
       fireEvent.click(hardButton);
       expect(mockOnStartGame).toHaveBeenCalledWith('hard');
     });
@@ -182,9 +182,9 @@ describe('MainMenu', () => {
       expect(screen.getByText('Medium')).toBeInTheDocument();
     });
 
-    it('should display "Impossible" label for hard difficulty', () => {
+    it('should display "Hard" label for hard difficulty', () => {
       render(<MainMenu onStartGame={mockOnStartGame} />);
-      expect(screen.getByText('Impossible')).toBeInTheDocument();
+      expect(screen.getByText('Hard')).toBeInTheDocument();
     });
   });
 

@@ -71,16 +71,13 @@ npm run deploy
 ## Branch Management
 
 ### Current Setup
-- **Working branch**: `github-pages-setup` (configured for GitHub Pages subdirectory)
+- **Main branch**: `main` (source code and development)
 - **Production branch**: `gh-pages` (auto-managed by deployment)
 
 ### Deploying from Any Branch
 ```bash
 # You can deploy from any branch
 git checkout main
-npm run deploy  # ✅ Works
-
-git checkout custom-domain-setup
 npm run deploy  # ✅ Works
 
 git checkout feature-branch
@@ -95,9 +92,6 @@ npm run deploy  # ✅ Works
 ```bash
 # Check for TypeScript errors
 npm run build
-
-# Check for linting issues
-npm run lint
 
 # Run tests
 npm run test
@@ -157,7 +151,7 @@ vite.config.ts          # Build configuration
 | `npm run preview` | Preview production build |
 | `npm run deploy` | Deploy to GitHub Pages |
 | `npm run test` | Run unit tests |
-| `npm run lint` | Check code quality |
+
 
 ---
 
@@ -169,4 +163,4 @@ vite.config.ts          # Build configuration
 
 ---
 
-*Last updated: January 23, 2026*
+*Last updated: February 2, 2026*

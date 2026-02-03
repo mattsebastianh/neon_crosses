@@ -3,7 +3,7 @@ import { renderHook, act } from '@testing-library/react';
 import { useStats } from './useStats';
 
 describe('useStats', () => {
-  const STORAGE_KEY = 'tictactoe-stats-v2';
+  const STORAGE_KEY = 'neon-crosses-stats-v2';
 
   beforeEach(() => {
     // Clear localStorage before each test

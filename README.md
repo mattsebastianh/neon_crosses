@@ -110,7 +110,7 @@ The AI is mathematically **unbeatable** in "Impossible" mode when playing optima
 
 ## 📊 Statistics Tracking
 
-Game statistics are stored in `localStorage` under the key `tictactoe-stats-v2`:
+Game statistics are stored in `localStorage` under the key `neon-crosses-stats-v2`:
 
 ```typescript
 interface GameStats {
@@ -140,8 +140,9 @@ Stats are tracked per difficulty with:
 ```bash
 npm run dev      # Start dev server with hot reload
 npm run build    # Type-check and build for production
-npm run lint     # Run ESLint
 npm run preview  # Preview production build locally
+npm run deploy   # Deploy to GitHub Pages (see DEPLOYMENT.md)
+npm run test     # Run unit tests with Vitest
 ```
 
 ### Code Style
@@ -192,10 +193,10 @@ This project is licensed under the MIT License. See [LICENSE](LICENSE) for detai
 
 ## 🙏 Acknowledgments
 
-- Inspired by classic Tic-Tac-Toe implementations
+- Inspired by classic tic-tac-toe implementations
 - Neon aesthetic inspired by cyberpunk design trends
 - Built as a showcase project for React + TypeScript + Vite
-- Development assisted by Google Antigravity and Claude Code
+- Development assisted with Google Antigravity and Claude Code
 
 ## 🐛 Known Issues
 

@@ -31,7 +31,7 @@ export function useStats() {
     const [statsByDifficulty, setStatsByDifficulty] = useState<StatsByDifficulty>(INITIAL_STATS_BY_DIFFICULTY);
 
     useEffect(() => {
-        const saved = localStorage.getItem('tictactoe-stats-v2');
+        const saved = localStorage.getItem('neon-crosses-stats-v2');
         if (saved) {
             try {
                 setStatsByDifficulty(JSON.parse(saved));
@@ -43,7 +43,7 @@ export function useStats() {
 
     const saveStats = (newStats: StatsByDifficulty) => {
         setStatsByDifficulty(newStats);
-        localStorage.setItem('tictactoe-stats-v2', JSON.stringify(newStats));
+        localStorage.setItem('neon-crosses-stats-v2', JSON.stringify(newStats));
     };
 
     const recordWin = (difficulty: GameMode) => {
